@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <sys/types.h>
 int main()
 {
     printf("c文件操作程序说明:\n");
