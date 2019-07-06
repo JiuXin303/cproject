@@ -52,7 +52,7 @@ int main() {
       scanf("%s",filepath);
       if(!(dir=opendir(filepath)))
       {
-       printf("读取文件失败\n");
+       printf("读取文件列表失败\n");
        break;
       }
       while((dirfile=readdir(dir))!=NULL)
