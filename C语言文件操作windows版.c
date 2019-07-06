@@ -3,19 +3,19 @@
 #include <windows.h>
 int pt()
 {
-	printf("\t\tcÓïÑÔÎÄ¼þÎÄ±¾²Ù×÷windows°æ\n");
-	printf("\t\tËµÃ÷:Ö»¶ÔÎÄ¼þ¼ÐºÍ'txt'ÎÄ±¾¸ñÊ½ÓÐÐ§\n");
-	printf("\t\tÂ·¾¶¸ñÊ½¾ÙÀýC:/»òC:/windows»òC:/windows/1.txt\n");
-	printf("\t\tÎÄ±¾²Ù×÷Òª¼Ó'.txt'ºó×º\n");
-	printf("\t\t1.ÎÄ¼þÁÐ±í\n");
-	printf("\t\t2.ÐÂ½¨ÎÄ¼þ¼Ð\n");
-	printf("\t\t3.ÐÂ½¨ÎÄ±¾\n");
-	printf("\t\t4.É¾³ýÎÄ¼þ¼Ð\n");
-	printf("\t\t5.É¾³ýÎÄ±¾\n");
-	printf("\t\t6.¸´ÖÆÎÄ±¾\n");
-	printf("\t\t7.ÖØÃüÃûÎÄ¼þ»òÎÄ±¾\n");
-	printf("\t\tÊäÈëÆäËûÊý×ÖÍË³ö\n");
-	printf("\t\tÇëÊäÈëÄãµÄÑ¡Ïî:");
+	printf("\t\tcè¯­è¨€æ–‡ä»¶æ–‡æœ¬æ“ä½œwindowsç‰ˆ\n");
+	printf("\t\tè¯´æ˜Ž:åªå¯¹æ–‡ä»¶å¤¹å’Œ'txt'æ–‡æœ¬æ ¼å¼æœ‰æ•ˆ\n");
+	printf("\t\tè·¯å¾„æ ¼å¼ä¸¾ä¾‹C:/æˆ–C:/windowsæˆ–C:/windows/1.txt\n");
+	printf("\t\tæ–‡æœ¬æ“ä½œè¦åŠ '.txt'åŽç¼€\n");
+	printf("\t\t1.æ–‡ä»¶åˆ—è¡¨\n");
+	printf("\t\t2.æ–°å»ºæ–‡ä»¶å¤¹\n");
+	printf("\t\t3.æ–°å»ºæ–‡æœ¬\n");
+	printf("\t\t4.åˆ é™¤æ–‡ä»¶å¤¹\n");
+	printf("\t\t5.åˆ é™¤æ–‡æœ¬\n");
+	printf("\t\t6.å¤åˆ¶æ–‡æœ¬\n");
+	printf("\t\t7.é‡å‘½åæ–‡ä»¶æˆ–æ–‡æœ¬\n");
+	printf("\t\tè¾“å…¥å…¶ä»–æ•°å­—é€€å‡º\n");
+	printf("\t\tè¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 	int a;
 	scanf("%d", &a);
 	return a;
@@ -26,32 +26,32 @@ void set_console_color(unsigned short color_index)
 }
 int setcolor()
 {
-	printf("ÑÕÉ«´úÂë\n");;
+	printf("é¢œè‰²ä»£ç \n");;
 	set_console_color(1);
-	printf("1.À¶É«\n");
+	printf("1.è“è‰²\n");
 	set_console_color(2);
-	printf("2.ÂÌÉ«\n");
+	printf("2.ç»¿è‰²\n");
 	set_console_color(3);
-	printf("3.ºþÀ¶É«\n");
+	printf("3.æ¹–è“è‰²\n");
 	set_console_color(4);
-	printf("4.ºìÉ«\n");
+	printf("4.çº¢è‰²\n");
 	set_console_color(5);
-	printf("5.×ÏÉ«\n");
+	printf("5.ç´«è‰²\n");
 	set_console_color(6);
-	printf("6.»ÆÉ«\n");
+	printf("6.é»„è‰²\n");
 	set_console_color(7);
-	printf("7.°×É«\n"); 
+	printf("7.ç™½è‰²\n"); 
 	set_console_color(8);
-	printf("8.»ÒÉ«\n");
+	printf("8.ç°è‰²\n");
 	set_console_color(9);
-	printf("9.µ­À¶É«\n");
+	printf("9.æ·¡è“è‰²\n");
 	set_console_color(7);
-	printf("ÇëÊäÈëÒªÏÔÊ¾µÄÑÕÉ«´úÂë(ÀýÈç:ÏÔÊ¾À¶É«,ÊäÈë1):");
+	printf("è¯·è¾“å…¥è¦æ˜¾ç¤ºçš„é¢œè‰²ä»£ç (ä¾‹å¦‚:æ˜¾ç¤ºè“è‰²,è¾“å…¥1):");
 	int a;
 	scanf("%d", &a);
 	if ((a > 9)||(a<=0))
 	{
-		printf("ÊäÈë´íÎó,ÇëÖØÐÂÊäÈë:");	
+		printf("è¾“å…¥é”™è¯¯,è¯·é‡æ–°è¾“å…¥:");	
 		scanf("%d", &a);
 	}
 	return a;
@@ -66,7 +66,7 @@ int main()
 		switch (a)
 		{
 		case 1:
-			printf("ÇëÊäÈëÒª²é¿´ÎÄ¼þÁÐ±íµÄÂ·¾¶:");
+			printf("è¯·è¾“å…¥è¦æŸ¥çœ‹æ–‡ä»¶åˆ—è¡¨çš„è·¯å¾„:");
 			int b = 0;
 			char sreachdir[255];
 			scanf("%s", sreachdir);
@@ -77,7 +77,7 @@ int main()
 			handle = _findfirst(sreach, &FileInfo);
 			if (-1 == handle)
 			{
-				printf("¶ÁÈ¡Ä¿Â¼Ê§°Ü\n");
+				printf("è¯»å–ç›®å½•å¤±è´¥\n");
 				break;
 			}
 			while (!_findnext(handle, &FileInfo))
@@ -87,7 +87,7 @@ int main()
 				{
 					continue;
 				}
-				printf("ÎÄ¼þ%d: %s\t", b, FileInfo.name);
+				printf("æ–‡ä»¶%d: %s\t", b, FileInfo.name);
 				if ((b % 1) == 0)
 				{
 
@@ -99,58 +99,58 @@ int main()
 			sreach = NULL;
 			break;
 		case 2:
-			printf("ÇëÊäÈëÄãÒªÐÂ½¨µÄÎÄ¼þ¼ÐÂ·¾¶:");
+			printf("è¯·è¾“å…¥ä½ è¦æ–°å»ºçš„æ–‡ä»¶å¤¹è·¯å¾„:");
 			char mkfile[255];
 			scanf("%s", mkfile);
 			if (mkdir(mkfile, 777) == -1)
 			{
-				printf("ÐÂ½¨ÎÄ¼þ´íÎó\n");
+				printf("æ–°å»ºæ–‡ä»¶é”™è¯¯\n");
 				break;
 			}
-			printf("ÒÑ´´½¨ÎÄ¼þ¼Ð:%s\n", mkfile);
+			printf("å·²åˆ›å»ºæ–‡ä»¶å¤¹:%s\n", mkfile);
 			break;
 		case 3:
-			printf("ÇëÊäÈëÄãÒªÐÂ½¨µÄÎÄ±¾Â·¾¶:");
+			printf("è¯·è¾“å…¥ä½ è¦æ–°å»ºçš„æ–‡æœ¬è·¯å¾„:");
 			FILE* fp;
 			char mktxt[255];
 			scanf("%s", mktxt);
 			if ((fp = fopen(mktxt, "wt+")) == NULL)
 			{
-				printf("ÐÂ½¨ÎÄ±¾´íÎó\n");
+				printf("æ–°å»ºæ–‡æœ¬é”™è¯¯\n");
 				break;
 			}
-			printf("ÒÑÐÂ½¨ÎÄ±¾:%s\n", mktxt);
+			printf("å·²æ–°å»ºæ–‡æœ¬:%s\n", mktxt);
 			fclose(fp);
 			break;
 		case 4:
-			printf("ÇëÊäÈëÄãÒªÉ¾³ýµÄÎÄ¼þÂ·¾¶:");
+			printf("è¯·è¾“å…¥ä½ è¦åˆ é™¤çš„æ–‡ä»¶è·¯å¾„:");
 			char dlfilename[255];
 			scanf("%s", dlfilename);
 			if ((rmdir(dlfilename)) == -1)
 			{
-				printf("É¾³ýÎÄ¼þÊ§°Ü\n");
+				printf("åˆ é™¤æ–‡ä»¶å¤±è´¥\n");
 				break;
 			}
-			printf("ÒÑÉ¾³ýÎÄ¼þ:%s\n", dlfilename);
+			printf("å·²åˆ é™¤æ–‡ä»¶:%s\n", dlfilename);
 			break;
 		case 5:
-			printf("ÇëÊäÈëÄãÒªÉ¾³ýµÄÎÄ±¾Â·¾¶:");
+			printf("è¯·è¾“å…¥ä½ è¦åˆ é™¤çš„æ–‡æœ¬è·¯å¾„:");
 			char dltxtname[255];
 			scanf("%s", dltxtname);
 			if ((remove(dltxtname)) == -1)
 			{
-				printf("É¾³ýÎÄ±¾Ê§°Ü\n");
+				printf("åˆ é™¤æ–‡æœ¬å¤±è´¥\n");
 				break;
 			}
-			printf("ÒÑÉ¾³ýÎÄ±¾:%s\n", dltxtname);
+			printf("å·²åˆ é™¤æ–‡æœ¬:%s\n", dltxtname);
 			break;
 		case 6:
-			printf("ÇëÊäÈëÒª¸´ÖÆµÄÎÄ±¾Â·¾¶:");
-			char cp;
+			printf("è¯·è¾“å…¥è¦å¤åˆ¶çš„æ–‡æœ¬è·¯å¾„:");
+			int cp;
 			char oname[255];
 			scanf("%s", oname);
 			char nname[255];
-			printf("ÇëÊäÈë¸´ÖÆºóµÄÎÄ±¾Â·¾¶:");
+			printf("è¯·è¾“å…¥å¤åˆ¶åŽçš„æ–‡æœ¬è·¯å¾„:");
 			scanf("%s", nname);
 			FILE* oldname = fopen(oname, "rb+");
 			FILE* newname = fopen(nname, "wb+");
@@ -158,29 +158,29 @@ int main()
 			{
 				fputc(cp, newname);
 			}
-			printf("ÎÄ±¾:%s ÒÑ¸´ÖÆµ½ %s\n", oname, nname);
+			printf("æ–‡æœ¬:%s å·²å¤åˆ¶åˆ° %s\n", oname, nname);
 			fclose(oldname);
 			fclose(newname);
 			break;
 		case 7:
-			printf("ÇëÊäÈëÒªÖØÃüÃûÎÄ¼þ»òÎÄ±¾µÄÂ·¾¶:");
+			printf("è¯·è¾“å…¥è¦é‡å‘½åæ–‡ä»¶æˆ–æ–‡æœ¬çš„è·¯å¾„:");
 			char oldfilename[255];
 			scanf("%s", oldfilename);
 			char newfilename[255];
-			printf("ÇëÊäÈëÖØÃüÃûºóÎÄ¼þ»òÎÄ±¾µÄÂ·¾¶:");
+			printf("è¯·è¾“å…¥é‡å‘½ååŽæ–‡ä»¶æˆ–æ–‡æœ¬çš„è·¯å¾„:");
 			scanf("%s", newfilename);
 			if ((rename(oldfilename, newfilename)) == -1)
 			{
-				printf("ÖØÃüÃûÊ§°Ü\n");
+				printf("é‡å‘½åå¤±è´¥\n");
 				break;
 			}
-			printf("ÎÄ¼þ»òÎÄ±¾:%s ÒÑÖØÃüÃûÎª %s\n", oldfilename, newfilename);
+			printf("æ–‡ä»¶æˆ–æ–‡æœ¬:%s å·²é‡å‘½åä¸º %s\n", oldfilename, newfilename);
 			break;
 		default:
 			set_console_color(4);
-			printf("Çë°´ÈÎÒâ¼üÈ·ÈÏÍË³ö:");
+			printf("è¯·æŒ‰ä»»æ„é”®ç¡®è®¤é€€å‡º:");
 			getch();
-			printf("\nÍË³öÖÐ...");
+			printf("\né€€å‡ºä¸­...");
 			return 0;
 			break;
 		}
