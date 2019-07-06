@@ -50,6 +50,7 @@ int main() {
       struct dirent *dirfile;
       char filepath[255];
       scanf("%s",filepath);
+      strcat(filepath, "/.");
       if(!(dir=opendir(filepath)))
       {
        printf("读取文件列表失败\n");
