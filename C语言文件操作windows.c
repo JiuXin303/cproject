@@ -5,6 +5,7 @@ int pt()
 	printf("\t\tc语言文件文本操作\n");
 	printf("\t\t说明:只对文件夹和'txt'文本格式有效\n");
 	printf("\t\t路径格式举例C:/或C:/windows\n");
+	printf("\t\t打开文本要加'.txt'后缀\n");
 	printf("\t\t1.文件列表\n");
 	printf("\t\t2.新建文件夹\n");
 	printf("\t\t3.新建文本\n");
