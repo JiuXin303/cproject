@@ -45,7 +45,7 @@ int main()
 				{
 					continue;
 				}
-				printf("%s\t", FileInfo.name);
+				printf("%d %s\t", b,FileInfo.name);
 				if ((b % 3)==0)
 				{
 					printf("\n");
