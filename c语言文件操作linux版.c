@@ -119,7 +119,7 @@ int main() {
       break;
       case 6:
       printf("请输入要复制的文本路径:");
-      char cp;
+      int cp;
       char oname[255];
       scanf("%s", oname);
       char nname[255];
