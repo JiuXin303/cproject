@@ -37,8 +37,10 @@ int main()
 			long handle;
 			handle = _findfirst(sreach, &FileInfo);
 			if (-1 == handle)
-				return -1;
-
+			{
+			        printf("读取目录失败\n");
+				break;
+			}
 			while (!_findnext(handle, &FileInfo))
 			{
 				++b;
