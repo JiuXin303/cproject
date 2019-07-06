@@ -13,7 +13,8 @@ int pt()
 	printf("\t\t4.删除文件夹\n");
 	printf("\t\t5.删除文本\n");
 	printf("\t\t6.复制文本\n");
-	printf("\t\t7.重命名文件或文本\n");
+        printf("\t\t7.移动文件或文本\n");
+	printf("\t\t8.重命名文件或文本\n");
 	printf("\t\t输入其他数字退出\n");
 	printf("\t\t请输入你的选项:");
 	int a;
@@ -162,7 +163,21 @@ int main()
 			fclose(oldname);
 			fclose(newname);
 			break;
-		case 7:
+                case 7:
+                        printf("请输入要移动文件或文本的路径:");
+                        char mvoldfilename[255];
+                        scanf("%s", mvoldfilename);
+                        char mvnewfilename[255];
+                        printf("请输入移动后文件或文本的路径:");
+                        scanf("%s", mvnewfilename);
+                        if ((rename(mvoldfilename, mvnewfilename)) == -1)
+                        {
+                                printf("移动失败\n");
+                                break;
+                        }
+                        printf("文件或文本:%s 已移动到 %s\n", mvoldfilename,mvnewfilename);
+                        break;
+		case 8:
 			printf("请输入要重命名文件或文本的路径:");
 			char oldfilename[255];
 			scanf("%s", oldfilename);
