@@ -77,7 +77,7 @@ int main()
 			handle = _findfirst(sreach, &FileInfo);
 			if (-1 == handle)
 			{
-				printf("读取目录失败\n");
+				printf("读取文件列表失败\n");
 				break;
 			}
 			while (!_findnext(handle, &FileInfo))
