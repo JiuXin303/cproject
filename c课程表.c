@@ -40,25 +40,25 @@ int printfweek(int num)
 {
 	switch (num)
 	{
-	case 1:printf("ÐÇÆÚÒ»\n"); break;
-	case 2:printf("ÐÇÆÚ¶þ\n"); break;
-	case 3:printf("ÐÇÆÚÈý\n"); break;
-	case 4:printf("ÐÇÆÚËÄ\n"); break;
-	case 5:printf("ÐÇÆÚÎå\n"); break;
-	case 6:printf("ÐÇÆÚÁù\n"); break;
-	case 7:printf("ÐÇÆÚÈÕ\n"); break;
+	case 1:printf("æ˜ŸæœŸä¸€\n"); break;
+	case 2:printf("æ˜ŸæœŸäºŒ\n"); break;
+	case 3:printf("æ˜ŸæœŸä¸‰\n"); break;
+	case 4:printf("æ˜ŸæœŸå››\n"); break;
+	case 5:printf("æ˜ŸæœŸäº”\n"); break;
+	case 6:printf("æ˜ŸæœŸå…­\n"); break;
+	case 7:printf("æ˜ŸæœŸæ—¥\n"); break;
 	}
 	return 0;
 }
 int openandprintfclassnodelist()
 {
-	printf("ÇëÊäÈë¶ÁÈ¡¿Î³Ì±íµÄÂ·¾¶:");
+	printf("è¯·è¾“å…¥è¯»å–è¯¾ç¨‹è¡¨çš„è·¯å¾„:");
 	char filename[255];
 	scanf("%s", filename);
 	FILE* fp;
 	if ((fp = fopen(filename, "r+")) == NULL)
 	{
-		printf("¶ÁÈ¡ÎÄ¼þ´íÎó\n");
+		printf("è¯»å–æ–‡ä»¶é”™è¯¯\n");
 		return 0;
 	}
 	int a;
@@ -85,7 +85,7 @@ int freeheadnodelist(struct nodelist* headnodelist)
 		free(pf);
 		pf = p;
 	}
-	free(pf);
+	free(p);
 	return 0;
 }
 int saveweektoclassfile(char* filename, int num)
@@ -93,11 +93,11 @@ int saveweektoclassfile(char* filename, int num)
 	FILE* fp;
 	if ((fp = fopen(filename, "a+")) == NULL)
 	{
-		printf("ÎÞ·¨±£´æÎÄ¼þ\n");
+		printf("æ— æ³•ä¿å­˜æ–‡ä»¶\n");
 		return 0;
 	}
-	char week[7][5] = { "Ò»","¶þ","Èý","ËÄ","Îå","Áù","ÈÕ" };
-	fprintf(fp, "\n\t\tÐÇÆÚ%s\n", week[num]);
+	char week[7][5] = { "ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","æ—¥" };
+	fprintf(fp, "\n\t\tæ˜ŸæœŸ%s\n", week[num]);
 	filename = NULL;
 	fclose(fp);
 	return 0;
@@ -107,16 +107,16 @@ int savaclassfile(char* filename, struct nodelist* headnodelist, int num)
 	FILE* fp;
 	if ((fp = fopen(filename, "a+")) == NULL)
 	{
-		printf("±£´æÎÄ¼þ´íÎó\n");
+		printf("ä¿å­˜æ–‡ä»¶é”™è¯¯\n");
 		return 0;
 	}
 	struct nodelist* p = headnodelist->next;
 	if (p == NULL)
 	{
-		printf("ÎÞ·¨±£´æ\n");
+		printf("æ— æ³•ä¿å­˜\n");
 		return 0;
 	}
-	fprintf(fp, "µÚ%d½Ú %s¿Î\t", p->data.classnum, p->data.classname);
+	fprintf(fp, "ç¬¬%dèŠ‚ %sè¯¾\t", p->data.classnum, p->data.classname);
 	if (num % 3 == 0)
 	{
 		fprintf(fp, "\n");
@@ -128,12 +128,12 @@ int savaclassfile(char* filename, struct nodelist* headnodelist, int num)
 }
 int creatandsaveclassnodelist(char* filename)
 {
-	printf("ÇëÊäÈëÉÏ¿Î×ÜÌìÊý:");
+	printf("è¯·è¾“å…¥ä¸Šè¯¾æ€»å¤©æ•°:");
 	int a;
 	scanf("%d", &a);
 	while (a > 7)
 	{
-		printf("ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë:");
+		printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥:");
 		scanf("%d", &a);
 	}
 	int b;
@@ -142,21 +142,21 @@ int creatandsaveclassnodelist(char* filename)
 		printfweek(b + 1);
 		saveweektoclassfile(filename, b);
 		struct syllabus info;
-		char week[7][5] = { "Ò»","¶þ","Èý","ËÄ","Îå","Áù","ÈÕ" };
-		printf("ÇëÊäÈëÐÇÆÚ%sÉÏ¶àÉÙ½Ú:", week[b]);
+		char week[7][5] = { "ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","æ—¥" };
+		printf("è¯·è¾“å…¥æ˜ŸæœŸ%sä¸Šå¤šå°‘èŠ‚:", week[b]);
 		int d, e;
 		scanf("%d", &d);
 		while (d > 8)
 		{
-			printf("ÊäÈë´íÎó£¬ÇëÖØÐÂÊäÈë:");
+			printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥:");
 			scanf("%d", &d);
 		}
 		for (e = 0; e < d; ++e)
 		{
 			struct nodelist* headnodelist = creatclasslist();
-			printf("µÚ%d½Ú", e + 1);
+			printf("ç¬¬%dèŠ‚", e + 1);
 			info.classnum = e + 1;
-			printf("ÇëÊäÈë¿Î³ÌÃû×Ö:");
+			printf("è¯·è¾“å…¥è¯¾ç¨‹åå­—:");
 			scanf("%s", info.classname);
 			insertnodebytail(headnodelist, info);
 			savaclassfile(filename, headnodelist, e + 1);
@@ -169,24 +169,24 @@ int main()
 {
 	do
 	{
-		printf("\t\tcÓïÑÔ¿Î³Ì±í\n");
-		printf("\t\t1.´ÓÎÄ¼þ¶ÁÈ¡¿Î³Ì±í\n");
-		printf("\t\t2.´´½¨Ò»¸öÐÂ¿Î³Ì±í\n");
-		printf("\t\t3.ÆäËûÊý×ÖÍË³ö\n");
-		printf("\t\tÇëÊäÈëÄãµÄÑ¡Ïî:");
+		printf("\t\tcè¯­è¨€è¯¾ç¨‹è¡¨\n");
+		printf("\t\t1.ä»Žæ–‡ä»¶è¯»å–è¯¾ç¨‹è¡¨\n");
+		printf("\t\t2.åˆ›å»ºä¸€ä¸ªæ–°è¯¾ç¨‹è¡¨\n");
+		printf("\t\t3.å…¶ä»–æ•°å­—é€€å‡º\n");
+		printf("\t\tè¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 		int a;
 		scanf("%d", &a);
 		switch (a)
 		{
 		case 1:openandprintfclassnodelist(); break;
 		case 2:
-			printf("ÇëÊäÈë±£´æÎÄ¼þÂ·¾¶:");
+			printf("è¯·è¾“å…¥ä¿å­˜æ–‡ä»¶è·¯å¾„:");
 			FILE* fp;
 			char filename[255];
 			scanf("%s", filename);
 			if ((fp = fopen(filename, "w+")) == NULL)
 			{
-				printf("±£´æ´íÎó\n");
+				printf("ä¿å­˜é”™è¯¯\n");
 				break;
 			}
 			fclose(fp);
