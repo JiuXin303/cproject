@@ -170,6 +170,7 @@ int main()
 	do
 	{
 		printf("\t\tc语言课程表\n");
+		printf("\t\t输入路径格式举例:xxx.txt\n");
 		printf("\t\t1.从文件读取课程表\n");
 		printf("\t\t2.创建一个新课程表\n");
 		printf("\t\t3.其他数字退出\n");
