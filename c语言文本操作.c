@@ -246,6 +246,7 @@ int editortext()
 int print_main(void)
 {
 	printf("\t\tC语言文本操作\n");
+	printf("\t\t说明:编辑文本默认在文本末尾加一行,如果第一行存在可删除\n");
 	printf("\t\t1.创建文本\n");
 	printf("\t\t2.编辑文本\n");
 	printf("\t\t3.删除文本\n");
