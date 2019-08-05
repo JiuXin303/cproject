@@ -154,6 +154,18 @@ int deletetext(struct headnode* headnode)
 	return 1;
 }
 
+int resetnum(struct headnode *headnode)
+{
+        struct headnode *num=headnode;
+	int b=0;
+	while (num->next != NULL)
+	{
+		++b;
+		num=num->next;
+		num->data.num = b;
+	}
+}
+
 int inserttext(struct headnode* headnode)
 {
 	printf("请输入插入的行数:");
@@ -235,7 +247,7 @@ int editortext()
 		switch (choice)
 		{
 		case 1:printftext(headnode); break;
-		case 2:deletetext(headnode); break;
+		case 2:deletetext(headnode);int resetnum(headnode); break;
 		case 3:inserttext(headnode); break;
 		case 4:savetext(headnode,filename); break;
 		default:freeheadnode(headnode); return 0; break;
