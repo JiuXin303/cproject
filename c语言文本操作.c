@@ -65,7 +65,7 @@ int addcreatnewtextcontent(char *filename)
 	FILE* fp;
 	if ((fp = fopen(filename, "r+")) == NULL)
 	{
-		printf("ÎŞ·¨´´½¨\n");
+		printf("æ— æ³•åˆ›å»º\n");
 		remove(filename);
 		return 0;
 	}
@@ -76,15 +76,15 @@ int addcreatnewtextcontent(char *filename)
 int creattext(void)
 {
 	char filename[255];
-	printf("ÇëÊäÈëÂ·¾¶:");
+	printf("è¯·è¾“å…¥è·¯å¾„:");
 	scanf("%s", filename);
 	FILE* fp;
 	if ((fp = fopen(filename, "w+")) == NULL)
 	{
-		printf("ÎŞ·¨´´½¨\n");
+		printf("æ— æ³•åˆ›å»º\n");
 		return 0;
 	}
-	printf("´´½¨³É¹¦\n");
+	printf("åˆ›å»ºæˆåŠŸ\n");
 	fclose(fp);
 	addcreatnewtextcontent(filename);
 	return 1;
@@ -95,7 +95,7 @@ int loadtext(struct headnode* headnode,char *filename)
 	FILE* fp;
 	if ((fp = fopen(filename, "r+")) == NULL)
 	{
-		printf("ÎŞ·¨´ò¿ªÎÄ¼ş\n");
+		printf("æ— æ³•æ‰“å¼€æ–‡ä»¶\n");
 		return 0;
 	}
 	int a = 0;
@@ -117,7 +117,7 @@ int printftext(struct headnode* headnode)
 	struct headnode* p = headnode->next;
 	if (p == NULL)
 	{
-		printf("ÎŞ·¨ÏÔÊ¾\n");
+		printf("æ— æ³•æ˜¾ç¤º\n");
 		return 0;
 	}
 	while (p->next != NULL)
@@ -130,13 +130,13 @@ int printftext(struct headnode* headnode)
 struct headnode* pf;
 int deletetext(struct headnode* headnode)
 {
-	printf("ÇëÊäÈëÒªÉ¾³ıµÄĞĞÊı:");
+	printf("è¯·è¾“å…¥è¦åˆ é™¤çš„è¡Œæ•°:");
 	int a;
 	scanf("%d", &a);;
 	struct headnode* p = headnode;
 	if (p == NULL)
 	{
-		printf("ÎŞ·¨É¾³ı\n");
+		printf("æ— æ³•åˆ é™¤\n");
 		return 0;
 	}
 	while (p->data.num != a)
@@ -145,7 +145,7 @@ int deletetext(struct headnode* headnode)
 		p = p->next;
 		if (p == NULL)
 		{
-			printf("ÎŞ·¨É¾³ı\n");
+			printf("æ— æ³•åˆ é™¤\n");
 			return 0;
 		}
 	}
@@ -156,10 +156,10 @@ int deletetext(struct headnode* headnode)
 
 int inserttext(struct headnode* headnode)
 {
-	printf("ÇëÊäÈë²åÈëµÄĞĞÊı:");
+	printf("è¯·è¾“å…¥æ’å…¥çš„è¡Œæ•°:");
 	int a;
 	scanf("%d", &a);
-	printf("ÇëÊäÈë²åÈëµÄÄÚÈİ:");
+	printf("è¯·è¾“å…¥æ’å…¥çš„å†…å®¹:");
 	struct line info;
 	info.num = a,
 	scanf("%s", info.text);
@@ -171,7 +171,7 @@ int inserttext(struct headnode* headnode)
 		p = p->next;
 		if (p->next == NULL)
 		{
-			printf("ÎŞ·¨²åÈë,ÊäÈëĞĞÊı´óÓÚËùÓĞĞĞÊı\n");
+			printf("æ— æ³•æ’å…¥,è¾“å…¥è¡Œæ•°å¤§äºæ‰€æœ‰è¡Œæ•°\n");
 			return 0;
 		}
 	}
@@ -190,13 +190,13 @@ int savetext(struct headnode* headnode,char *filename)
 	FILE* fp;
 	if ((fp = fopen(filename, "r+")) == NULL)
 	{
-		printf("ÎŞ·¨±£´æ\n");
+		printf("æ— æ³•ä¿å­˜\n");
 		return 0;
 	}
 	struct headnode* p = headnode;
 	if (p->next == NULL)
 	{
-		printf("ÎŞ·¨±£´æ\n");
+		printf("æ— æ³•ä¿å­˜\n");
 		fclose(fp);
 		return 0;
 	}
@@ -211,12 +211,12 @@ int savetext(struct headnode* headnode,char *filename)
 
 int editortext_menu()
 {
-	printf("\t\t1.ÏÔÊ¾ÎÄ±¾\n");
-	printf("\t\t2.É¾³ıÄ³ĞĞ\n");
-	printf("\t\t3.²åÈëÄ³ĞĞ\n");
-	printf("\t\t4.±£´æÎÄ¼ş\n");
-	printf("\t\tÊäÈëÆäËüÊı×ÖÍË³ö\n");
-	printf("\t\tÇëÊäÈëÄãµÄÑ¡Ïî:");
+	printf("\t\t1.æ˜¾ç¤ºæ–‡æœ¬\n");
+	printf("\t\t2.åˆ é™¤æŸè¡Œ\n");
+	printf("\t\t3.æ’å…¥æŸè¡Œ\n");
+	printf("\t\t4.ä¿å­˜æ–‡ä»¶\n");
+	printf("\t\tè¾“å…¥å…¶å®ƒæ•°å­—é€€å‡º\n");
+	printf("\t\tè¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 	int a;
 	scanf("%d", &a);
 	return a;
@@ -225,7 +225,7 @@ int editortext_menu()
 int editortext()
 {
 	struct headnode* headnode = creatheadnode();
-	printf("ÇëÊäÈë±à¼­ÎÄ¼şÂ·¾¶:");
+	printf("è¯·è¾“å…¥ç¼–è¾‘æ–‡ä»¶è·¯å¾„:");
 	char filename[255];
 	scanf("%s", filename);
 	loadtext(headnode, filename);
@@ -245,12 +245,12 @@ int editortext()
 
 int print_main(void)
 {
-	printf("\t\tCÓïÑÔÎÄ±¾²Ù×÷\n");
-	printf("\t\t1.´´½¨ÎÄ±¾\n");
-	printf("\t\t2.±à¼­ÎÄ±¾\n");
-	printf("\t\t3.É¾³ıÎÄ±¾\n");
-	printf("\t\tÊäÈëÆäËüÊı×ÖÍË³ö\n");
-	printf("\t\tÇëÊäÈëÄãµÄÑ¡Ïî:");
+	printf("\t\tCè¯­è¨€æ–‡æœ¬æ“ä½œ\n");
+	printf("\t\t1.åˆ›å»ºæ–‡æœ¬\n");
+	printf("\t\t2.ç¼–è¾‘æ–‡æœ¬\n");
+	printf("\t\t3.åˆ é™¤æ–‡æœ¬\n");
+	printf("\t\tè¾“å…¥å…¶å®ƒæ•°å­—é€€å‡º\n");
+	printf("\t\tè¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 	int a;
 	scanf("%d", &a);
 	return a;
@@ -258,15 +258,15 @@ int print_main(void)
 
 int deletetextfile()
 {
-	printf("ÇëÊäÈëÒªÉ¾³ıµÄÎÄ±¾:");
+	printf("è¯·è¾“å…¥è¦åˆ é™¤çš„æ–‡æœ¬:");
 	char name[255];
 	scanf("%s", name);
 	if ((remove(name)) == -1)
 	{
-		printf("É¾³ıÎÄ±¾Ê§°Ü\n");
+		printf("åˆ é™¤æ–‡æœ¬å¤±è´¥\n");
 		return 0;
 	}
-	printf("ÒÑÉ¾³ıÎÄ±¾:%s\n", name);
+	printf("å·²åˆ é™¤æ–‡æœ¬:%s\n", name);
 	return 1;
 }
 
