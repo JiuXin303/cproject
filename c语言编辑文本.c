@@ -237,7 +237,7 @@ int openandprintffile(char *filename)
 
 int editortext_menu()
 {
-	printf("\t\t1.显示文本\n");
+	printf("\t\t1.显示行数\n");
 	printf("\t\t2.删除某行\n");
 	printf("\t\t3.插入某行\n");
 	printf("\t\t4.保存文件\n");
