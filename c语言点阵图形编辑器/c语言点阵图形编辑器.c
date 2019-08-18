@@ -1,10 +1,10 @@
 #include "bg_engine_mian.h"
 int printf_bg_mian(void)
 {
-	printf("1.ÏÔÊ¾Í¼ÐÎÎÄ¼þ\n");
-	printf("2.ÏÔÊ¾Í¼ÐÎ\n");
-	printf("ÊäÈëÆäËüÊý×ÖÍË³ö\n");
-	printf("ÇëÊäÈëÄãµÄÑ¡Ïî:");
+	printf("1.æ˜¾ç¤ºå›¾å½¢æ–‡ä»¶\n");
+	printf("2.æ˜¾ç¤ºå›¾å½¢\n");
+	printf("è¾“å…¥å…¶å®ƒæ•°å­—é€€å‡º\n");
+	printf("è¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 	int a;
 	scanf("%d", &a);
 	return a;
@@ -14,19 +14,19 @@ int editor_bg_mian(int x, int y, int** array, char* filename)
 	while (1)
 	{
 		print_graph(x, y, 2, array, filename);
-		printf("\nÍ¼ÐÎ±à¼­\n");
-		printf("±à¼­µÄÍ¼ÐÎÎÄ¼þÂ·¾¶:%s\n", filename);
-		printf("1.ÏÔÊ¾Í¼ÐÎ\n");
-		printf("2.ÐÞ¸ÄÍ¼ÐÎ\n");
-		printf("3.±£´æÍ¼ÐÎ\n");
-		printf("ÊäÈëÆäËüÊý×ÖÍË³ö\n");
-		printf("ÇëÊäÈëÄãµÄÑ¡Ïî:");
+		printf("\nå›¾å½¢ç¼–è¾‘\n");
+		printf("ç¼–è¾‘çš„å›¾å½¢æ–‡ä»¶è·¯å¾„:%s\n", filename);
+		printf("1.æ˜¾ç¤ºå›¾å½¢\n");
+		printf("2.ä¿®æ”¹å›¾å½¢\n");
+		printf("3.ä¿å­˜å›¾å½¢\n");
+		printf("è¾“å…¥å…¶å®ƒæ•°å­—é€€å‡º\n");
+		printf("è¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 		int a;
 		scanf("%d", &a);
 		switch (a)
 		{
 		case 1:
-			printf("ÏÔÊ¾Í¼ÐÎ\n");
+			printf("æ˜¾ç¤ºå›¾å½¢\n");
 			int b = printf_bg_mian();
 			switch (b)
 			{
@@ -40,23 +40,23 @@ int editor_bg_mian(int x, int y, int** array, char* filename)
 			}
 			break;
 		case 2:
-			printf("ÐÞ¸ÄÍ¼ÐÎ\n");
+			printf("ä¿®æ”¹å›¾å½¢\n");
 			int c, d, e;
-			printf("ÇëÊäÈëÐÞ¸ÄÍ¼ÐÎÎÄ¼þÐÐ:");
+			printf("è¯·è¾“å…¥ä¿®æ”¹å›¾å½¢æ–‡ä»¶è¡Œ:");
 			scanf(" %d", &c);
 			if (c > x||c<=0)
 			{
-				printf("ÊäÈë´íÎó\n");
+				printf("è¾“å…¥é”™è¯¯\n");
 				break;
 			}
-			printf("ÇëÊäÈëÐÞ¸ÄÍ¼ÐÎÎÄ¼þÁÐ:");
+			printf("è¯·è¾“å…¥ä¿®æ”¹å›¾å½¢æ–‡ä»¶åˆ—:");
 			scanf(" %d", &d);
 			if (d > y || d <= 0)
 			{
-				printf("ÊäÈë´íÎó\n");
+				printf("è¾“å…¥é”™è¯¯\n");
 				break;
 			}
-			printf("ÇëÊäÈëÐÞ¸ÄµÄÊý¾Ý£¨Ö»Ö§³Ö0»ò1,0ÊÇ'. ',1ÊÇ'  '£©:");
+			printf("è¯·è¾“å…¥ä¿®æ”¹çš„æ•°æ®ï¼ˆåªæ”¯æŒ0æˆ–1,0æ˜¯'. ',1æ˜¯'  'ï¼‰:");
 			scanf(" %d", &e);
 			if (e == 0 || e == 1)
 			{
@@ -64,14 +64,14 @@ int editor_bg_mian(int x, int y, int** array, char* filename)
 			}
 			else
 			{
-				printf("ÊäÈë´íÎó\n");
+				printf("è¾“å…¥é”™è¯¯\n");
 			}
 			break;
 		case 3:
-			printf("±£´æÍ¼ÐÎ\n");
-			printf("1.±£´æÊý¾Ý\n");
-			printf("2.±£´æÍ¼ÐÎ\n");
-			printf("ÇëÊäÈëÄãµÄÑ¡Ïî:");
+			printf("ä¿å­˜å›¾å½¢\n");
+			printf("1.ä¿å­˜æ•°æ®\n");
+			printf("2.ä¿å­˜å›¾å½¢\n");
+			printf("è¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 			int g;
 			scanf("%d", &g);
 			if (g == 1 || g == 2)
@@ -80,7 +80,7 @@ int editor_bg_mian(int x, int y, int** array, char* filename)
 			}
 			else
 			{
-				printf("ÊäÈë´íÎó\n");
+				printf("è¾“å…¥é”™è¯¯\n");
 			}
 			break;
 		default:
@@ -94,17 +94,17 @@ int main(void)
 {
 	while (1)
 	{
-		printf("CÓïÑÔµãÕóÍ¼ÐÎ±à¼­Æ÷\n");
-		printf("1.Í¼ÐÎ±à¼­\n");
-		printf("2.ºÏ²¢Í¼ÐÎ\n");
-		printf("ÊäÈëÆäËüÊý×ÖÍË³ö\n");
-		printf("ÇëÊäÈëÄãµÄÑ¡Ïî:");
+		printf("Cè¯­è¨€ç‚¹é˜µå›¾å½¢ç¼–è¾‘å™¨\n");
+		printf("1.å›¾å½¢ç¼–è¾‘\n");
+		printf("2.åˆå¹¶å›¾å½¢\n");
+		printf("è¾“å…¥å…¶å®ƒæ•°å­—é€€å‡º\n");
+		printf("è¯·è¾“å…¥ä½ çš„é€‰é¡¹:");
 		int a;
 		scanf("%d", &a);
 		switch (a)
 		{
 		case 1:
-			printf("ÊÇ·ñ´´½¨ÐÂÍ¼ÐÎÎÄ¼þ(y.´´½¨ n.ÍË³ö):");
+			printf("æ˜¯å¦åˆ›å»ºæ–°å›¾å½¢æ–‡ä»¶(y.åˆ›å»º n.é€€å‡º):");
 			int x, y;
 			char a;
 			char filename[255];
@@ -112,43 +112,43 @@ int main(void)
 			switch (a)
 			{
 			case 'y':
-				printf("ÇëÊäÈë´´½¨Í¼ÐÎÎÄ¼þÂ·¾¶:");
+				printf("è¯·è¾“å…¥åˆ›å»ºå›¾å½¢æ–‡ä»¶è·¯å¾„:");
 				scanf("%s", filename);
 				strcat(filename, ".bg");
-				printf("ÇëÊäÈë´´½¨Í¼ÐÎÎÄ¼þ×ÜÐÐ:");
+				printf("è¯·è¾“å…¥åˆ›å»ºå›¾å½¢æ–‡ä»¶æ€»è¡Œ:");
 				scanf("%d", &x);
-				printf("ÇëÊäÈë´´½¨Í¼ÐÎÎÄ¼þ×ÜÁÐ:");
+				printf("è¯·è¾“å…¥åˆ›å»ºå›¾å½¢æ–‡ä»¶æ€»åˆ—:");
 				scanf("%d", &y);
 				creat_graph(x, y, filename);
 				int** array = load_graph(x, y, filename);
 				editor_bg_mian(x, y, array, filename);
 				break;
 			case 'n':
-				printf("ÍË³öÖÐ...\n");
+				printf("é€€å‡ºä¸­...\n");
 				return 0;
 				break;
 			}
 			break;
 		case 2:
-			printf("ºÏ²¢Í¼ÐÎ\n");
-			printf("ÇëÊäÈë´ýºÏ²¢µÄÍ¼ÐÎÂ·¾¶:");
+			printf("åˆå¹¶å›¾å½¢\n");
+			printf("è¯·è¾“å…¥å¾…åˆå¹¶çš„å›¾å½¢è·¯å¾„:");
 			char merge_filename1[255];
 			scanf("%s", merge_filename1);
 			strcat(merge_filename1, ".bg");
-			printf("ÇëÊäÈëÒªºÏ²¢µÄÍ¼ÐÎÂ·¾¶:");
+			printf("è¯·è¾“å…¥è¦åˆå¹¶çš„å›¾å½¢è·¯å¾„:");
 			char merge_filename2[255];
 			scanf("%s", merge_filename2);
 			strcat(merge_filename2, ".bg");
-			printf("ÇëÊäÈëºÏ²¢ºóµÄÍ¼ÐÎÂ·¾¶:");
+			printf("è¯·è¾“å…¥åˆå¹¶åŽçš„å›¾å½¢è·¯å¾„:");
 			char merge_filename[255];
 			scanf("%s", merge_filename);
 			strcat(merge_filename, ".bg");
-			printf("ÇëÊäÈëºÏ²¢¼ä¸ô:");
+			printf("è¯·è¾“å…¥åˆå¹¶é—´éš”:");
 			int n;
 			scanf("%d", &n);
 			graph_merge(merge_filename1, merge_filename2, merge_filename, n);
 			break;
-		default:printf("ÍË³öÖÐ...\n"); return 0; break;
+		default:printf("é€€å‡ºä¸­...\n"); return 0; break;
 		}
 	}
 }
