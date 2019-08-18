@@ -1,28 +1,28 @@
 /*
-CÓïÑÔµãÕóÍ¼ĞÎ¿â
-graph_engine_mian.h Í¼ĞÎÒıÇæÍ·ÎÄ¼ş
-creat_graph_file.h ´´½¨Í¼ĞÎÎÄ¼ş(creat_graph)
-load_graph_file.h ¼ÓÔØÍ¼ĞÎÎÄ¼ş(load_graph)
-print_graph_file.h ÏÔÊ¾Í¼ĞÎ(print_graph)
-editor_graph.h ±à¼­Í¼ĞÎ(editor_graph)
-sava_graph_file.h ±£´æÍ¼ĞÎµ½ÎÄ¼ş(editor_graph)
+Cè¯­è¨€ç‚¹é˜µå›¾å½¢åº“
+graph_engine_mian.h å›¾å½¢å¼•æ“å¤´æ–‡ä»¶
+creat_graph_file.h åˆ›å»ºå›¾å½¢æ–‡ä»¶(creat_graph)
+load_graph_file.h åŠ è½½å›¾å½¢æ–‡ä»¶(load_graph)
+print_graph_file.h æ˜¾ç¤ºå›¾å½¢(print_graph)
+editor_graph.h ç¼–è¾‘å›¾å½¢(editor_graph)
+sava_graph_file.h ä¿å­˜å›¾å½¢åˆ°æ–‡ä»¶(editor_graph)
 
-int creat_graph(int x,int y,char* filename) ´´½¨Ò»¸öÍ¼ĞÎÎÄ¼ş
-int cheak_graph_file(char* filename) ¼ì²éÍ¼ĞÎÎÄ¼şÊÇ·ñÎª¿Õ,¿Õ·µ»Ø0,·ñÔò·µ»Ø1
-int** load_graph(int x, int y, char* filename) ¼ÓÔØÍ¼ĞÎÎÄ¼ş·µ»ØÒ»¸ö¶şÎ¬Êı×é
+int creat_graph(int x,int y,char* filename) åˆ›å»ºä¸€ä¸ªå›¾å½¢æ–‡ä»¶
+int cheak_graph_file(char* filename) æ£€æŸ¥å›¾å½¢æ–‡ä»¶æ˜¯å¦ä¸ºç©º,ç©ºè¿”å›0,å¦åˆ™è¿”å›1
+int** load_graph(int x, int y, char* filename) åŠ è½½å›¾å½¢æ–‡ä»¶è¿”å›ä¸€ä¸ªäºŒç»´æ•°ç»„
 int print_graph(int x, int y,int model, int** array,char *filename) 
-ÏÔÊ¾Í¼ĞÎÎÄ¼ş,Ä£Ê½1ÎªÏÔÊ¾Í¼ĞÎÎÄ¼ş,2Îª½«¶şÎ¬Êı×é×ª»»Í¼ĞÎ²¢ÏÔÊ¾ĞĞÁĞ¼ÓÍ¼ĞÎ,3Îª½«¶şÎ¬Êı×é×ª»»Í¼ĞÎÖ±½ÓÏÔÊ¾
-int editor_graph(int x, int y, int** array,int c)ĞŞ¸Ä¶şÎ¬Êı×é,cÖ»Ö§³Ö0ºÍ1
+æ˜¾ç¤ºå›¾å½¢æ–‡ä»¶,æ¨¡å¼1ä¸ºæ˜¾ç¤ºå›¾å½¢æ–‡ä»¶,2ä¸ºå°†äºŒç»´æ•°ç»„è½¬æ¢å›¾å½¢å¹¶æ˜¾ç¤ºè¡Œåˆ—åŠ å›¾å½¢,3ä¸ºå°†äºŒç»´æ•°ç»„è½¬æ¢å›¾å½¢ç›´æ¥æ˜¾ç¤º
+int editor_graph(int x, int y, int** array,int c)ä¿®æ”¹äºŒç»´æ•°ç»„,cåªæ”¯æŒ0å’Œ1
 int graph_merge(char* merge_filename1, char* merge_filename2, char* merge_filename,int n)
-merge_filename1ºÍmerge_filename2ÎªÒªºÏ³ÉµÄÍ¼ĞÎÂ·¾¶,merge_filenameºÏ³ÉºóµÄÍ¼ĞÎÂ·¾¶,nºÏ²¢¼ä¸ô
+merge_filename1å’Œmerge_filename2ä¸ºè¦åˆæˆçš„å›¾å½¢è·¯å¾„,merge_filenameåˆæˆåçš„å›¾å½¢è·¯å¾„,nåˆå¹¶é—´éš”
 int sava_graph(int x, int y, int model, int** array, char* filename) 
-Ä£Ê½1Îª½«¶şÎ¬Êı×é×ª»»³É¶şÎ¬Í¼ĞÎÊı×é²¢±£´æ,Ä£Ê½2Îª½«¶şÎ¬Êı×é×ª»»³ÉÍ¼ĞÎÊı¾İ²¢±£´æ
-int free_graph(int x, int** array) ÊÍ·Å¶şÎ¬Êı×é
+æ¨¡å¼1ä¸ºå°†äºŒç»´æ•°ç»„è½¬æ¢æˆäºŒç»´å›¾å½¢æ•°ç»„å¹¶ä¿å­˜,æ¨¡å¼2ä¸ºå°†äºŒç»´æ•°ç»„è½¬æ¢æˆå›¾å½¢æ•°æ®å¹¶ä¿å­˜
+int free_graph(int x, int** array) é‡Šæ”¾äºŒç»´æ•°ç»„ç©ºé—´
 
-ÎŞÌØ¶¨ËµÃ÷,xºÍy·Ö±ğ´ú±íĞĞÊıºÍÁĞÊı,filename´ú±íÎÄ¼şÂ·¾¶,array´ú±í¶şÎ¬Êı×é,model´ú±íÄãÒªµÄÖ´ĞĞÄ£Ê½
-ĞÂ½¨Í¼ĞÎÎÄ¼şÊı¾İÎªÈ«²¿Îª1;¼ÓÔØºÍÏÔÊ¾ĞÂ½¨Í¼ĞÎÎÄ¼şµ½¶şÎ¬Êı×é²»ĞŞ¸ÄÊı¾İ¶şÎ¬Êı×é¾ùÎª1
-±£´æÎÄ¼şÔò½«ĞÂ½¨ÎÄ¼şÊı¾İ1±ä0,0±ä1»ò0±ä". ",1±ä"  "±£´æ
-³ÌĞòÖ´ĞĞÎŞÎó·µ»Ø1,´íÎó·µ»Ø0,¿ÉÓÃÀ´¼ì²éº¯ÊıÊÇ·ñË³ÀûÖ´ĞĞ
+æ— ç‰¹å®šè¯´æ˜,xå’Œyåˆ†åˆ«ä»£è¡¨è¡Œæ•°å’Œåˆ—æ•°,filenameä»£è¡¨æ–‡ä»¶è·¯å¾„,arrayä»£è¡¨äºŒç»´æ•°ç»„,modelä»£è¡¨ä½ è¦çš„æ‰§è¡Œæ¨¡å¼
+æ–°å»ºå›¾å½¢æ–‡ä»¶æ•°æ®ä¸ºå…¨éƒ¨ä¸º1;åŠ è½½å’Œæ˜¾ç¤ºæ–°å»ºå›¾å½¢æ–‡ä»¶åˆ°äºŒç»´æ•°ç»„ä¸ä¿®æ”¹æ•°æ®äºŒç»´æ•°ç»„å‡ä¸º1
+ä¿å­˜æ–‡ä»¶åˆ™å°†æ–°å»ºæ–‡ä»¶æ•°æ®1å˜0,0å˜1æˆ–0å˜". ",1å˜"  "ä¿å­˜
+ç¨‹åºæ‰§è¡Œæ— è¯¯è¿”å›1,é”™è¯¯è¿”å›0,å¯ç”¨æ¥æ£€æŸ¥å‡½æ•°æ˜¯å¦é¡ºåˆ©æ‰§è¡Œ
 */
 #ifndef BG_ENGINE_MIAN_H
 #define BG_ENGINE_MIAN_H
